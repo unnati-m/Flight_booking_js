@@ -1,0 +1,401 @@
+<?php
+session_start();
+if (!isset($_SESSION['uid'])) {
+	header("Location:signin.php");
+	exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>One Page Website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/home.css">
+  
+    
+</head>
+
+<body>
+ 
+<!--------------------------------------------home section-----------------------------------------------------------------------> 
+
+    <section id="home">
+        <header>
+            <p><a href="#"><img src="image/logo.png" alt="" id="logo"></a><p id="title">Jett<span>Skii</span> </p></p>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                
+                <li><a href="#book">Book-Flight</a></li>
+                <li><a href="#about">More</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </header>
+        <div class="animated-text" id="text1">
+            <div class="line"> If it matters to you, it matters to us.</div>
+            <div class="line"> Journeys of Inspiration</div>
+            <div class="line"> WELCOME</div>
+            <div class="line"> Book Your Flight now</div>
+            
+        </div>
+
+        <div class="card">
+            <div class="af">
+                <img src="./image/p1.png" alt="" id="placess">
+                <div>
+                    <p class="text_1">Chennai Flights</p>
+                    <h3 class="text_2"> via - Delhi,Mumbai,Coimbatore,Maduri</h3>
+                </div>
+            </div>
+            <div class="af">
+                <img src="./image/p2.png" alt=""  id="placess">
+                <div>
+                    <p class="text_1">Goa Flights</p>
+                    <h3 class="text_2">via - Delhi,Mumbai,Bangalore</h3>
+                </div>
+            </div>
+            <div class="af">
+                <img src="./image/p3.png" alt=""  id="placess">
+                <div>
+                    <p class="text_1">Mumbai Flights</p>
+                    <h3 class="text_2">via - Delhi,Bangalore,Chennai</h3>
+                </div>
+            </div>
+            <div class="af">
+                <img src="./image/p4.png" alt=""  id="placess">
+               <div>
+                <p class="text_1">Hyderbad Flights</p>
+                <h3 class="text_2">via -Chennai,Mumbai,Bangalore,Delhi</h3>
+               </div>
+            </div>
+            <div class="af">
+                <img src="./image/p5.png" alt=""  id="placess">
+             <div>
+                <p class="text_1">Delhi Flights</p>
+                <h3 class="text_2">via - Mumbai,pune,Bangalore,Chennai</h3>
+             </div>
+            </div>
+            <div class="af">
+                <img src="./image/p6.png" alt=""  id="placess">
+             <div>
+                <p class="text_1">Pune Flights</p>
+                <h3 class="text_2">via - Delhi,Bangalore,Chennai</h3>
+             </div>
+            </div>
+            <div class="af">
+                <img src="./image/p7.png" alt=""  id="placess">
+                <div>
+                    <p class="text_1">Kolkata Flights</p>
+                    <h3 class="text_2">via - Delhi,Mumbai,Bangalore,pune</h3>
+                </div>
+            </div>
+            <div class="af">
+                <img src="./image/p8.png" alt=""  id="placess">
+                <div>
+                    <p class="text_1">Bangalore Flights</p>
+                    <h3 class="text_2">via - Delhi,pune,Mumbai,Kolkata</h3>
+                </div>
+            </div>
+            <div class="af">
+                <img src="./image/p9.png" alt=""  id="placess">
+                <div>
+                    <p class="text_1">Jaipur Flights</p>
+                    <h3 class="text_2">via - Mumbai,Delhi,pune,Bangalore</h3>
+                </div>
+            </div>
+            <div class="af">
+                <img src="./image/p6.png" alt=""  id="placess">
+                <div>
+                    <p class="text_1">Lucknow Flights</p>
+                    <h3 class="text_2">via - Mumbai,Delhi,pune,Bangalore</h3>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+
+    <!-------------------------------------------------book flight page------------------------------------------------------------------> 
+    
+    <section id="book">
+        <div class="container">
+            <form action="">
+            </form>
+            <div class="radioButtons"  required>
+              
+                
+                <p> 
+                <input type="radio" name="trip" id="trip" value="One way">One Way    
+                <input type="radio" name="trip" id="trip" value="Round Trip">Round Trip 
+                </p> 
+               
+              
+                <hr>
+            <div class="citynames" required>      
+                      
+                    
+                <p class="from">From: <select name="fcity" id="fcity" placeholder="City" required>
+                    <option value=""></option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Varanasi">Varanasi</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Jaipur">Jaipur</option>
+                </select>
+                 
+                 </p>
+
+                 <p class="to">
+                 
+                    &nbsp;&nbsp;&nbsp;&nbsp;To:&nbsp;<select name="tcity" id="tcity"  required>
+                    <option value=""></option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Varanasi">Varanasi</option></p>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Jaipur">Jaipur</option>
+                 
+                </select>
+            </div>
+           <hr>
+            <div class="dates" >
+                
+        
+                 <p class="departure">Departure Date: <input type="date" id="depDate" name="dep"  required/> </p>
+            
+                 <p class="Return"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return Date: <input type="date" id="retDate" name="ret"  > </p>
+            </div>
+            <hr>
+            <div class="info" >
+                <p >Number of Passenger: <input type="number" id ="num"name="passenger" value="number" placeholder="Enter here (1,2,3..)"  required></p>
+                <input type="radio" name="fclass" value="Economy">Economy Class
+                <input type="radio" name="fclass" value="Business">Business Class
+        
+            </div>
+            <hr>
+            <div class="RDBTN" >
+                <p  required> 
+                <input type="radio" name="fare" value="Regular Fare">Regular Fare    
+                <input type="radio" name="fare" value="Armed Forces Fare">Armed Forces Fare
+                <input type="radio" name="fare" value="Students Fare">Students Fare
+                </p> 
+                </div>       
+      <button id="submit" type="submit"  value="SUBMIT" onclick="addData()">Submit</button>
+        
+        
+        
+            </form>
+        </div>
+    
+    
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------------------------------------- about us page () --------------------------------------------------------------> 
+
+
+    <section id="about">
+        
+        
+<div id="helluu">
+  <div class="containerr">
+    <input type="radio" name="dot" id="one">
+    <input type="radio" name="dot" id="two">
+    <div class="main-card1">
+      <div class="cards1">
+        <div class="card1">
+         <div class="content">
+           <div class="imga">
+               <img id="imgg" src="image/11.jpg" alt="">
+            <!--- <img src="images/img1.jpg" alt="">-->
+           </div>
+           <div class="details">
+             <div class="name1">Mandatory Web CHECKIN</div>
+             <div class="job">check-in before 6 hours</div>
+           </div>
+           
+         </div>
+        </div>
+        <div class="card1">
+         <div class="content">
+           <div class="imga">
+               <img  id="imgg" src="image/55.png" alt="">
+            <!--- <img src="images/img2.jpg" alt="">--->
+           </div>
+           <div class="details">
+             <div class="nam1e">Reach early</div>
+             <div class="job">Reach 2 hours before</div>
+           </div>
+           
+         </div>
+        </div>
+        <div class="card1">
+         <div class="content">
+           <div class="imga">
+               <img id="imgg" src="image/33.jpg" alt="">
+            <!-- <img src="images/img3.jpg" alt="">---->
+           </div>
+           <div class="details">
+             <div class="name1">Aarogya Setu</div>
+             <div class="job">Certify your health status</div>
+           </div>
+           
+         </div>
+        </div>
+      </div>
+      <div class="cards1">
+        <div class="card1">
+         <div class="content">
+           <div class="imga">
+               <img id="imgg" src="image/22.jpg" alt="">
+             <!---<img src="images/img4.jpg" alt="">--->
+           </div>
+           <div class="details">
+             <div class="name1">Mandatory health declaration</div>
+             <div class="job">Health status before you fly</div>
+           </div>
+           
+         </div>
+        </div>
+        <div class="card1">
+         <div class="content">
+           <div class="imga">
+               <img id="imgg" src="image/66.png" alt="">
+             <!--<img src="images/img5.jpg" alt="">---->
+           </div>
+           <div class="details">
+             <div class="name1">Face Mask</div>
+             <div class="job">Wear mask all time</div>
+           </div>
+           
+         </div>
+        </div>
+        <div class="card1">
+         <div class="content">
+           <div class="imga">
+               <img id="imgg" src="image/44.jpg" alt="">
+             <!--<img src="images/img6.jpeg" alt="">--->
+           </div>
+           <div class="details">
+             <div class="name1">Boarding pass</div>
+             <div class="job">Boarding pass and baggae tag</div>
+           </div>
+           
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttton">
+      <label for="one" class=" active one"></label>
+      <label for="two" class="two"></label>
+    </div>
+  </div>
+</div>
+
+        
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------------------------------------- contact  us page --------------------------------------------------------------> 
+    <section id="contact">
+        <h3 id="text6">Email Us</h3>
+        <p id="text7">Send a message and We will get back to you within 24 hours.</p>
+        <form  action="mailto:ns5164@srmist.edu.in?subject=FLY_HIGH_Contact" method="post" enctype="text/plain" onsubmit="location.href='thanks.html'" class="contact-form">
+          <label for="">Name</label><br />
+          <input class="name" name="Name" type="text" placeholder="enter your name"  required/><br />
+          <label for="">Email</label><br />
+          <input class="email" name="email" type="email" placeholder="enter your email" required/><br />
+          <label for="">Message</label><br />
+          <textarea
+            class="message"
+            name="feedback"
+            id=""
+            cols="30"
+            rows="4"
+            placeholder="type message"
+            required
+          ></textarea
+          ><br />
+          <button value="Send" type="submit">Submit</button>
+        </form>
+        
+    </section>
+
+
+
+
+
+
+    <!------------------------------------------------- footer ------------------------------------------------------------------> 
+
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+    
+        <p>&copy;2021 JettSkii | All Rights Reserved </p>
+        <p style="font-size:20px ;font-weight:bold"> Made by : Nikhil, Nilay, Afrid, Shewta and Unnati</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="main.js"></script>
+</body>
+</html>
